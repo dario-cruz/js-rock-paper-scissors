@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Rock Paper Scissors</title>
+    </head>
+    <script>
+        // Setting the options for the game.
+        const rpsOptions = ["Rock", "Paper", "Scissors"]
+
+        // Function for computer random RPS selection.
+        // One first implementation forgot to add the return.
+        // Always remember the return.
+        function computerPlay() {
+            return rpsOptions[Math.floor(Math.random() * rpsOptions.length)];
+        }
+
+        // function to prompt the user for option.
+        function userPrompt() {
+            return prompt("Time to play! \nPlease make a selection. \nOptions: Rock, Paper, or Scissors.");
+        } 
+        // Store the value as a variable.
+        // var userSelection = userPrompt()
+
+        function compareSelections() {
+            let userSelection = userPrompt();
+            let computerSelect = computerPlay();
+            
+            console.log("The computer selected" + " " + computerSelect)
+            console.log("You selected" + " " + userSelection)
+
+            if (computerSelect == userSelection) {
+                console.log("The game is a tie \nNobody Wins.")
+            } else if (userSelection == "Rock") {
+                if (computerSelect == "Paper") {
+                    console.log("Paper Beats Rock.\nYou Lost!")
+                } else {
+                    console.log("Rock beats Scissors.\nYou win!")
+                }
+            } else if (userSelection == "Paper") {
+                if (computerSelect == "Scissors") {
+                    console.log("Scissors beat paper.\nDamn you lost!")
+                } else {
+                    console.log("Paper beats rock.\nNice you win!")
+                }
+
+            } else if (userSelection == "Scissors") {
+                if (computerSelect == "Rock") {
+                    console.log("Rock beats Scissors.\nSorry you lost!")
+                } else {
+                    console.log("Scissors beat Paper!\nYou win!.")
+                }
+            } else {
+                console.log("Not sure how we got here.\nCheck the code and try again.")
+            }
+        }
+
+
+        //Start game.
+        function startGame() {
+            compareSelections()
+        }
+
+
+
+</script>
+    <body>
+        <h1>Please open the JS Console to play.</h1>
+    </body>
+</html>
