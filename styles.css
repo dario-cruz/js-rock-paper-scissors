@@ -24,3 +24,9 @@ body {
         background-position: 0% 50%;
     }
 }
+
+/* Set font imported from fonts.google.com via api  */
+
+.title {
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+}
