@@ -1,7 +1,26 @@
 /* Setting up the default settings */
-. {
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
 
+/* Code for animated gradient background. */
+body {
+    background: linear-gradient(-45deg, #003865, #ef5b0c, #d4f6cc, #3ccf4e);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
