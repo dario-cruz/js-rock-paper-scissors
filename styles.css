@@ -3,7 +3,7 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    border: 2px solid black;
+    /* border: 2px solid black; */
 }
 
 /* Code for animated gradient background. */
@@ -57,4 +57,9 @@ body {
     width: 100px;
     border-radius: 10px;
     background-color: whitesmoke;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 2px 15px black;
 }
