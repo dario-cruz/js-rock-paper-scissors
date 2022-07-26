@@ -1,3 +1,8 @@
+// Defining consts for DOM manipulation.
+const resultH2 = document.querySelectorAll("h2.result_box");
+const resultP = document.querySelectorAll("p.result_box");
+
+
 // Setting the options for the game.
 const rpsOptions = ["Rock", "Paper", "Scissors"]
 
@@ -67,7 +72,7 @@ function compareSelections() {
     // Return values of who won the game.
     return usrWins;
     return cpuWins;
-}
+} 
 
 
 // Start game.
