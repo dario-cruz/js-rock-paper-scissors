@@ -68,3 +68,15 @@ body {
 .button_container button::selection {
     background-color: transparent;
 } 
+
+.startarea {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.startarea button {
+    background-color: whitesmoke;
+    width: 90px;
+    height: 30px;
+}
