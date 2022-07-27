@@ -1,7 +1,7 @@
 // Defining consts for DOM manipulation.
-const resultH2 = document.querySelectorAll("h2.result_box");
-const resultP = document.querySelectorAll("p.result_box");
-
+const resultVerdict = document.getElementsByClassName("results");
+const resultUser = document.getElementsByClassName("userScore");
+const resultCpu = document.getElementsByClassName("compScore");
 
 // Setting the options for the game.
 const rpsOptions = ["Rock", "Paper", "Scissors"]
@@ -89,6 +89,12 @@ function startGame() {
         } else if (cpuWins == true) {
             cpuScore++;
         }
+        let usrUpdate = document.createTextNode("Your score is " + usrScore);
+        let cpuUpdate = document.createTextNode("Computers score is " + cpuScore);
+
+        resultUser.appendChild(usrUpdate);
+        resultCpu.appendChild(cpuUpdate);
+        
         console.log("Your score is " + usrScore)
         console.log("Computers score is " + cpuScore)
     }
