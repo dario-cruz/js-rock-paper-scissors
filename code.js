@@ -2,6 +2,7 @@
 const resultVerdict = document.getElementsByClassName("results");
 const resultUser = document.getElementsByClassName("userScore");
 const resultCpu = document.getElementsByClassName("compScore");
+const startBtn = document.getElementById("start");
 
 // Setting the options for the game.
 const rpsOptions = ["Rock", "Paper", "Scissors"]
@@ -74,6 +75,10 @@ function compareSelections() {
     return cpuWins;
 } 
 
+// Function for start game via button.
+startBtn.addEventListener('click', () => {
+    startGame();
+});
 
 // Start game.
 function startGame() {
@@ -89,13 +94,16 @@ function startGame() {
         } else if (cpuWins == true) {
             cpuScore++;
         }
-        let usrUpdate = document.createTextNode("Your score is " + usrScore);
-        let cpuUpdate = document.createTextNode("Computers score is " + cpuScore);
+
+        // Defining the text nodes to be appended to the h2 DOM items. 
+        // Does not work for some reason. 
+        let usrUpdate = document.createTextNode(`Your score is ${usrScore}`);
+        let cpuUpdate = document.createTextNode(`Computers score is ${cpuScore}`);
 
         resultUser.appendChild(usrUpdate);
         resultCpu.appendChild(cpuUpdate);
-        
-        console.log("Your score is " + usrScore)
-        console.log("Computers score is " + cpuScore)
+
+        // console.log("Your score is " + usrScore)
+        // console.log("Computers score is " + cpuScore)
     }
 }
