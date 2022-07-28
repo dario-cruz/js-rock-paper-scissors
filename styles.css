@@ -36,6 +36,11 @@ body {
     text-align: center;
 }
 
+.title p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 .top_content {
     display: flex;
     justify-content: center;

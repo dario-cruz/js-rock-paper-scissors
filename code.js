@@ -84,27 +84,24 @@ function startGame() {
     // Set initial values for scores.
     let usrScore = 0;
     let cpuScore = 0;
+    
+    compareSelections();
+    if (usrWins == true) {
+        usrScore++;
+        // resultUser.appendChild(usrUpdate);
+        resultUser.innerHTML = `Your score is ${usrScore}`
+    } else if (cpuWins == true) {
+        cpuScore++;
+        // resultCpu.appendChild(cpuUpdate);
+        resultCpu.innerHTML = `Computers score is ${cpuScore}`
+    }
+    return;
+    // Defining the text nodes to be appended to the h2 DOM items. 
+    // Does not work for some reason. 
+    // console.log("Your score is " + usrScore)
+    // console.log("Computers score is " + cpuScore)
     // let usrUpdate = document.createTextNode(`Your score is ${usrScore}`);
     // let cpuUpdate = document.createTextNode(`Computers score is ${cpuScore}`);
-
     // For loop to play 5 games.
-    for (let i = 0; i < 5; i++){
-        compareSelections();
-        if (usrWins == true) {
-            usrScore++;
-            // resultUser.appendChild(usrUpdate);
-            resultUser.innerHTML = `Your score is ${usrScore}`
-        } else if (cpuWins == true) {
-            cpuScore++;
-            // resultCpu.appendChild(cpuUpdate);
-            resultCpu.innerHTML = `Computers score is ${cpuScore}`
-        }
-        // Defining the text nodes to be appended to the h2 DOM items. 
-        // Does not work for some reason. 
-
-
-        // console.log("Your score is " + usrScore)
-        // console.log("Computers score is " + cpuScore)
-        return;
-    }
+    // for (let i = 0; i < 5; i++){
 }
