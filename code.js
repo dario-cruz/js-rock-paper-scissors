@@ -96,11 +96,12 @@ scissorBtn.addEventListener('click', () => {
     startGame('Scissors');
 })
 
+let usrScore = 0;
+let cpuScore = 0;
+
 // Start game.
 function startGame(selectValue) {
     // Set initial values for scores.
-    let usrScore = 0;
-    let cpuScore = 0;
     
     compareSelections(selectValue);
     if (usrWins == true) {
@@ -127,4 +128,7 @@ function resetGame() {
     resultVerdict.innerHTML = "Play the game to see who wins!"
     resultUser.innerHTML = "Your score is 0"
     resultCpu.innerHTML = "Computers score is 0"
+    usrScore = 0
+    cpuScore = 0
+    
 }
