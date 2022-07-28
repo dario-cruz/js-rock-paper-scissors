@@ -4,6 +4,12 @@ const resultUser = document.getElementsByClassName("userScore")[0];
 const resultCpu = document.getElementsByClassName("compScore")[0];
 const startBtn = document.getElementById("start");
 
+// Defining const for buttons. 
+const rockBtn = document.getElementById("rock");
+const paperBtn = document.getElementById("paper");
+const scissorBtn = document.getElementById("scissor");
+
+
 // Setting the options for the game.
 const rpsOptions = ["Rock", "Paper", "Scissors"]
 
@@ -24,8 +30,8 @@ let usrWins = false
 let cpuWins = false
 
 // Comparison Code and Logic.
-function compareSelections() {
-    let userSelection = userPrompt();
+function compareSelections(selectValue) {
+    let userSelection = selectValue;
     let computerSelect = computerPlay();
 
     // Reset booleans for who has won.
@@ -80,12 +86,12 @@ startBtn.addEventListener('click', () => {
 });
 
 // Start game.
-function startGame() {
+function startGame(selectValue) {
     // Set initial values for scores.
     let usrScore = 0;
     let cpuScore = 0;
     
-    compareSelections();
+    compareSelections(selectValue);
     if (usrWins == true) {
         usrScore++;
         // resultUser.appendChild(usrUpdate);
