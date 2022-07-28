@@ -80,10 +80,21 @@ function compareSelections(selectValue) {
     return;
 } 
 
-// Function for start game via button.
+// Function for reset of game via button.
 startBtn.addEventListener('click', () => {
-    startGame();
+    resetGame();
 });
+
+// Function for selecting RPS options.
+rockBtn.addEventListener('click', () => {
+    startGame('Rock');
+});
+paperBtn.addEventListener('click', () => {
+    startGame('Paper');
+});
+scissorBtn.addEventListener('click', () => {
+    startGame('Scissors');
+})
 
 // Start game.
 function startGame(selectValue) {
@@ -110,4 +121,10 @@ function startGame(selectValue) {
     // let cpuUpdate = document.createTextNode(`Computers score is ${cpuScore}`);
     // For loop to play 5 games.
     // for (let i = 0; i < 5; i++){
+}
+
+function resetGame() {
+    resultVerdict.innerHTML = "Play the game to see who wins!"
+    resultUser.innerHTML = "Your score is 0"
+    resultCpu.innerHTML = "Computers score is 0"
 }
