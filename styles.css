@@ -85,3 +85,10 @@ body {
     width: 90px;
     height: 30px;
 }
+
+/* Result box styling. */
+.result_box {
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+    text-align: center;
+    margin-top: 20px;
+}
